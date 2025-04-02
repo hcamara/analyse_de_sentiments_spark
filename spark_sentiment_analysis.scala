@@ -67,7 +67,7 @@ object SentimentAnalysis {
 
     // Predict New Text
     import spark.implicits._
-    val newText = Seq(("Ce produit est incroyable, je l'adore !")).toDF("text")
+    val newText = Seq(("This product is amazing")).toDF("text")
     val prediction = model.transform(newText)
     prediction.select("text", "prediction").show()
 
