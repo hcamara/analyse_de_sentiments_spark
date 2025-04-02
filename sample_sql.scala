@@ -14,7 +14,7 @@ object SentimentAnalysis {
 
     // Exécution d'une requête SQL
     df.createOrReplaceTempView("data_table")
-    val result = spark.sql("SELECT column1, column2 FROM data_table WHERE column3 > 100")
+    val result = spark.sql("SELECT * FROM data_table")
 
     // Afficher les résultats
     result.show()
