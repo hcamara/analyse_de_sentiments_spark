@@ -4,6 +4,11 @@ import org.apache.spark.ml.classification.LogisticRegression
 import org.apache.spark.ml.Pipeline
 import org.apache.spark.sql.functions._
 
+
+
+object SentimentAnalysis {
+  def main(args: Array[String]): Unit = {
+
 // Create Spark Session
 val spark = SparkSession.builder()
   .appName("Sentiment Analysis")
@@ -68,3 +73,7 @@ prediction.select("text", "prediction").show()
 
 // Stop Spark Session
 spark.stop()
+
+  }
+  
+}
